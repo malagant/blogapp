@@ -1,0 +1,17 @@
+<h1>Welcome to the Home of blogging</h1>
+<p>
+  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+  magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+  gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
+  elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos
+  et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor
+  sit amet.
+</p>
+<p>
+  <% if current_user.present? %>
+   Click here to <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% else %>
+      To create a post <%= link_to 'login', new_user_session_path %>
+      or <%= link_to 'Sign up', new_user_registration_path %>
+  <% end %>
+</p>
